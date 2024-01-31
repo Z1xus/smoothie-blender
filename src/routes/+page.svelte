@@ -426,7 +426,7 @@
 				<p>
 					credit to <a
 						href="https://github.com/couleur-tweak-tips/smoothie-rs/graphs/contributors"
-						class="hover:text-blue-600 text-blue-500">couler and contributors</a
+						class="hover:text-blue-600 text-blue-500">couleur and contributors</a
 					>
 					for
 					<a
