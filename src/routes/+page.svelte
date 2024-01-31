@@ -356,7 +356,21 @@
 		</div>
 	</form>
 	<footer class="mt-6 text-center w-full">
-		<div class="flex justify-center items-center gap-2 text-gray-300 mb-2">
+		<p class="text-gray-400 my-4">
+			This app uses <a
+				href="https://github.com/couleur-tweak-tips/smoothie-rs/"
+				class="hover:text-blue-600 text-blue-500">smoothie-rs</a
+			>. Both
+			<a href="https://github.com/Z1xus/smoothie-blender" class="hover:text-blue-600 text-blue-500"
+				>this project</a
+			>
+			and
+			<a
+				href="https://github.com/couleur-tweak-tips/smoothie-rs/"
+				class="hover:text-blue-600 text-blue-500">smoothie-rs</a
+			> are licensed under GPL-v3.0.
+		</p>
+		<div class="flex justify-center items-center gap-2 text-gray-300">
 			<svg
 				xmlns="http://www.w3.org/2000/svg"
 				class="h-6 w-6 -mb-1 text-blue-500"
@@ -382,20 +396,6 @@
 				>{commitHash}</a
 			>
 		</div>
-		<p class="text-gray-400 mt-4">
-			This app uses <a
-				href="https://github.com/couleur-tweak-tips/smoothie-rs/"
-				class="hover:text-blue-600 text-blue-500">smoothie-rs</a
-			>. Both
-			<a href="https://github.com/Z1xus/smoothie-blender" class="hover:text-blue-600 text-blue-500"
-				>this project</a
-			>
-			and
-			<a
-				href="https://github.com/couleur-tweak-tips/smoothie-rs/"
-				class="hover:text-blue-600 text-blue-500">smoothie-rs</a
-			> are licensed under GPL-v3.0.
-		</p>
 	</footer>
 	{#if showInfoModal}
 		<div
