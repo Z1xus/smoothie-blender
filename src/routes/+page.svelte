@@ -1,7 +1,6 @@
 <script lang="ts">
 	import { writable, derived, get } from 'svelte/store';
 	import { slide } from 'svelte/transition';
-	import { cubicInOut } from 'svelte/easing';
 
 	const commitHash = import.meta.env.COMMIT_HASH;
 
