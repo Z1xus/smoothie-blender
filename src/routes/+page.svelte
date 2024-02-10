@@ -100,67 +100,7 @@
 >
 	<button class="group" on:click={() => (showInfoModal = true)}>
 		<div class="p-2 -m-2">
-			<svg
-				class="mb-2 fill-current text-blue-500 transition-transform duration-200 ease-in-out group-hover:-translate-y-3 group-hover:rotate-12"
-				xmlns="http://www.w3.org/2000/svg"
-				viewBox="0 0 24 24"
-				width="80"
-				height="80"
-			>
-				<circle
-					style="fill:#3b82f6;fill-opacity:1;stroke:none;stroke-width:1.62898;stroke-opacity:0;paint-order:stroke markers fill"
-					id="path8"
-					cx="9.1864023"
-					cy="11.444839"
-					r="1.6220371"
-				/>
-				<circle
-					style="fill:#3b82f6;fill-opacity:1;stroke:none;stroke-width:1.62898;stroke-opacity:0;paint-order:stroke markers fill"
-					id="path9"
-					cx="13.84759"
-					cy="13.690911"
-					r="1.6051408"
-				/>
-				<circle
-					style="fill:#3b82f6;fill-opacity:1;stroke:none;stroke-width:1.19459;stroke-opacity:0;paint-order:stroke markers fill"
-					id="path10"
-					r="1.4868674"
-					cy="8.0279837"
-					cx="10.576822"
-				/>
-				<circle
-					style="fill:#3b82f6;fill-opacity:1;stroke:none;stroke-width:1.19459;stroke-opacity:0;paint-order:stroke markers fill"
-					id="path10-6"
-					cx="14.944494"
-					cy="9.9691391"
-					r="1.4868674"
-				/>
-				<path
-					d="M 16.13,15.13 18,3 H 14 V 2 H 10 V 3 H 5 C 3.9,3 3,3.9 3,5 v 4 c 0,1.1 0.9,2 2,2 h 2.23 l 0.64,4.13 C 6.74,16.05 6,17.43 6,19 v 1 c 0,1.1 0.9,2 2,2 h 8 c 1.1,0 2,-0.9 2,-2 v -1 c 0,-1.57 -0.74,-2.95 -1.87,-3.87 M 5,9 V 5 H 6.31 L 6.93,9 H 5 m 7,10 c -0.55,0 -1,-0.45 -1,-1 0,-0.55 0.45,-1 1,-1 0.55,0 1,0.45 1,1 0,0.55 -0.45,1 -1,1 m 2.29,-5 H 9.72 L 8.33,5 h 7.34 z"
-					fill="#3b82f6"
-					id="path1"
-				/>
-				<path
-					style="fill:#3b82f6;fill-opacity:1;stroke:none;stroke-width:0.377953;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke markers fill"
-					d="m 12.259128,11.140855 -0.844811,-0.08448"
-					id="path12"
-				/>
-				<path
-					style="fill:#3b82f6;fill-opacity:1;stroke:none;stroke-width:0.377953;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke markers fill"
-					d="m 11.059497,12.002562 1.976857,-0.523783"
-					id="path13"
-				/>
-				<path
-					style="fill:#3b82f6;fill-opacity:1;stroke:none;stroke-width:0.377953;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke markers fill"
-					d="m 12.444987,10.380525 c -0.02253,0 -0.04506,0 -0.06758,0"
-					id="path14"
-				/>
-				<path
-					style="fill:#3b82f6;fill-opacity:1;stroke:none;stroke-width:0.377953;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke markers fill"
-					d="M 10.315031,14.518263 14.7578,2.0017811 l 0.848116,0.00117 -4.369171,12.7350579 z"
-					id="path15"
-				/>
-			</svg>
+			<img src="/favicon.svg" alt="logo" class="mb-2 h-20 w-20 fill-current text-blue-500 transition-transform duration-200 ease-in-out group-hover:-translate-y-3 group-hover:rotate-12" />
 		</div>
 	</button>
 	<h1 class="mb-4 text-3xl font-bold">smoothie-blender</h1>
