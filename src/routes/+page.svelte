@@ -68,7 +68,7 @@
 			formData.append('videoFile', currentVideoFile);
 			formData.append('settings', JSON.stringify(settings));
 
-			const response = await fetch('https://smoothieblenderbackend.serveo.net/blend-video', {
+			const response = await fetch('https://api.smblender.com/blend-video', {
 				method: 'POST',
 				body: formData
 			});
@@ -78,7 +78,7 @@
 			if (response.ok) {
 				if (data.success) {
 					statusMessage.set(data.message || 'your video ready');
-					videoLink.set(`https://smoothieblenderbackend.serveo.net/download/${data.filename}`);
+					videoLink.set(`https://api.smblender.com/download/${data.filename}`);
 				} else {
 					statusMessage.set(data.message || 'sum happened idk');
 					videoLink.set('');
@@ -97,7 +97,7 @@
 </script>
 
 <div
-	class="flex flex-col overflow-x-auto items-center justify-center min-h-screen bg-gray-900 text-gray-300 pt-8 pb-8"
+	class="flex flex-col overflow-x-auto items-center justify-center min-h-screen bg-gray-900 text-gray-300 py-12"
 >
 	<button class="group" on:click={() => (showInfoModal = true)}>
 		<div class="p-2 -m-2">
@@ -357,10 +357,10 @@
 	</form>
 	<footer class="mt-6 text-center w-full">
 		<p class="text-gray-400 my-4">
-			This app uses <a
+			This web app uses <a
 				href="https://github.com/couleur-tweak-tips/smoothie-rs/"
 				class="hover:text-blue-600 text-blue-500">smoothie-rs</a
-			>. Both
+			>. <br />Both
 			<a href="https://github.com/Z1xus/smoothie-blender" class="hover:text-blue-600 text-blue-500"
 				>this project</a
 			>
@@ -434,13 +434,7 @@
 						class="hover:text-blue-600 text-blue-500">smoothie-rs</a
 					>
 				</p>
-				<p>
-					renders provided to you by intel uhd graphics 630<span
-						class="align-super text-xs text-blue-500"
-						title="this is not a joke, all renders are being&#013;processed on a laptop with this integrated graphics"
-						>?</span
-					>
-				</p>
+				<p>renders provided to you by intel uhd graphics 630</p>
 				<button
 					class="mt-4 w-full px-4 py-2 bg-blue-700 hover:bg-blue-800 text-white rounded font-medium transition duration-300 ease-in-out"
 					on:click={() => (showInfoModal = false)}>Close</button
