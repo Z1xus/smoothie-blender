@@ -1,6 +1,6 @@
 {
 	"name": "smoothie-blender",
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"license": "GPL-3.0-only",
 	"author": "z1xus",
 	"description": "user-friendly web interface for smoothie-rs",
