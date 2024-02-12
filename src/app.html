@@ -8,6 +8,16 @@
 		%sveltekit.head%
 		<title>smoothie-blender</title>
 		<meta name="description" content="user-friendly web interface for smoothie-rs" />
+		
+		<!-- Google tag (gtag.js) -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-TW6JCVB4D8"></script>
+		<script>
+		  window.dataLayer = window.dataLayer || [];
+		  function gtag(){dataLayer.push(arguments);}
+		  gtag('js', new Date());
+
+		  gtag('config', 'G-TW6JCVB4D8');
+		</script>
 	</head>
 	<body data-sveltekit-preload-data="hover">
 		<div style="display: contents">%sveltekit.body%</div>
