@@ -24,11 +24,11 @@ export function handleFileChange(event: Event) {
 	fileUploadErrMsg.set(null);
 	if (files && files.length > 0) {
 		const file = files[0];
-		if (file.type === 'video/mp4' && file.size <= maxFileSize) {
+		if ((file.type === 'video/mp4' || file.type === 'video/x-matroska') && file.size <= maxFileSize) {
 			videoFile.set(file);
 		} else {
 			videoFile.set(null);
-			fileUploadErrMsg.set('file must be an mp4 video and under 75mb');
+			fileUploadErrMsg.set('file must be an mp4/mkv video and under 75mb');
 		}
 	}
 }

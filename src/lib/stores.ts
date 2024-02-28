@@ -14,7 +14,7 @@ export let showInterpolation = writable(false);
 export let showFrameBlending = writable(false);
 export let showFileUpload = writable(true);
 
-export const maxFileSize = 75 * 1024 * 1024; // 25 mb
+export const maxFileSize = 75 * 1024 * 1024; // 75 mb
 
 export const interpolationFps = writable(960);
 export const frameBlendIntensity = writable(1);

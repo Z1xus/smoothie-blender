@@ -58,7 +58,7 @@
 				<input
 					id="file-upload"
 					type="file"
-					accept="video/mp4"
+        			accept="video/mp4,video/x-matroska"
 					on:change={handleFileChange}
 					class="w-full file:mr-4 file:py-2 file:px-4 file:rounded-l-md file:text-sm file:font-semibold file:border-0 file:text-white file:bg-blue-700 file:cursor-pointer hover:file:bg-blue-800 file:transition file:ease-in-out file:duration-300 rounded-md text-sm bg-gray-700 text-gray-300"
 				/>
