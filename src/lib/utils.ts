@@ -28,7 +28,7 @@ export function handleFileChange(event: Event) {
 			videoFile.set(file);
 		} else {
 			videoFile.set(null);
-			fileUploadErrMsg.set('file must be an mp4 video and under 25mb');
+			fileUploadErrMsg.set('file must be an mp4 video and under 75mb');
 		}
 	}
 }
