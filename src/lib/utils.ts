@@ -1,4 +1,4 @@
-import { get } from 'svelte/store';
+import { get } from "svelte/store";
 import {
 	videoFile,
 	statusMessage,
@@ -16,7 +16,7 @@ import {
 	outputFpsIndex,
 	fileUploadErrMsg,
 	maxFileSize
-} from './stores';
+} from "./stores";
 
 export function handleFileChange(event: Event) {
 	const input = event.target as HTMLInputElement;
@@ -24,11 +24,11 @@ export function handleFileChange(event: Event) {
 	fileUploadErrMsg.set(null);
 	if (files && files.length > 0) {
 		const file = files[0];
-		if ((file.type === 'video/mp4' || file.type === 'video/x-matroska') && file.size <= maxFileSize) {
+		if ((file.type === "video/mp4" || file.type === "video/x-matroska") && file.size <= maxFileSize) {
 			videoFile.set(file);
 		} else {
 			videoFile.set(null);
-			fileUploadErrMsg.set('file must be an mp4/mkv video and under 75mb');
+			fileUploadErrMsg.set("file must be an mp4/mkv video and under 75mb");
 		}
 	}
 }
@@ -37,10 +37,10 @@ export async function handleSubmit(event: Event) {
 	event.preventDefault();
 	isLoading.set(true);
 	timedOutError.set(false);
-	statusMessage.set('');
+	statusMessage.set("");
 	const currentVideoFile = get(videoFile);
 	if (!currentVideoFile) {
-		fileUploadErrMsg.set('you have no video');
+		fileUploadErrMsg.set("you have no video");
 		isLoading.set(false);
 		return;
 	}
@@ -56,39 +56,37 @@ export async function handleSubmit(event: Event) {
 			brightBlendEnabled: get(brightBlendEnabled),
 			outputFps: get(outputFps)
 		};
-		formData.append('videoFile', currentVideoFile);
-		formData.append('settings', JSON.stringify(settings));
+		formData.append("videoFile", currentVideoFile);
+		formData.append("settings", JSON.stringify(settings));
 
-		const response = await fetch('https://api.smblender.com/blend-video', {
-			method: 'POST',
+		const response = await fetch("https://api.smblender.com/blend-video", {
+			method: "POST",
 			body: formData
 		});
 
 		if (response.status === 508) {
 			timedOutError.set(true);
-			statusMessage.set('sorry, i timed out');
-			videoLink.set('');
+			statusMessage.set("sorry, i timed out");
+			videoLink.set("");
 		} else {
 			const data = await response.json();
 			if (response.ok) {
 				if (data.success) {
-					statusMessage.set(data.message || 'your video ready');
+					statusMessage.set(data.message || "your video ready");
 					videoLink.set(`https://api.smblender.com/download/${data.filename}`);
 				} else {
-					statusMessage.set(data.message || 'something happened, i dont know what');
-					videoLink.set('');
+					statusMessage.set(data.message || "something happened, i dont know what");
+					videoLink.set("");
 				}
 			} else {
-				statusMessage.set(data.message || 'sorry, something went wrong, but i dont know what');
-				videoLink.set('');
+				statusMessage.set(data.message || "sorry, something went wrong, but i dont know what");
+				videoLink.set("");
 			}
 		}
 	} catch (error) {
-		console.error('failed to submit video and recipe:', error);
-		statusMessage.set(
-			'failed to process the request. there might be a network issue, or the worker is down'
-		);
-		videoLink.set('');
+		console.error("failed to submit video and recipe:", error);
+		statusMessage.set("failed to process the request. there might be a network issue, or the worker is down");
+		videoLink.set("");
 	}
 	isLoading.set(false);
 }
