@@ -265,29 +265,23 @@
 
 	{#if $showInfoModal}
 		<div class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 backdrop-blur-md overflow-y-auto">
-			<div class="mx-3 my-1 p-4 bg-gray-800 rounded-lg text-center leading-relaxed text-pretty">
-				<p class="mb-1 text-2xl font-bold">what?</p>
+			<div class="mx-3 my-1 p-4 bg-gray-800 rounded-lg text-center leading-relaxed max-w-md text-pretty">
+				<p class="mb-1 text-2xl font-bold">what is this?</p>
 				<hr class="my-4 mx-auto w-1/2 border-gray-600" />
 				<p>
-					<a href="https://github.com/couleur-tweak-tips/smoothie-rs/" class="hover:text-blue-600 text-blue-500">smoothie-rs</a> in a form of web app with
-					user-friendly interface
+					a <a href="https://github.com/couleur-tweak-tips/smoothie-rs/" class="hover:text-blue-600 text-blue-500">smoothie-rs</a> instance running on my machine, accessible using this web ui
 				</p>
 				<br />
-				<p class="mb-1 text-2xl font-bold">why?</p>
-				<hr class="my-4 mx-auto w-1/2 border-gray-600" />
-				<p>to test your config or render a video quickly on-the-go</p>
-				<br />
-				<p class="mb-1 text-2xl font-bold">by whom?</p>
+				<p class="mb-1 text-2xl font-bold">why this exists?</p>
 				<hr class="my-4 mx-auto w-1/2 border-gray-600" />
 				<p>
-					developed by <a href="https://z1xus.netlify.app/" class="hover:text-blue-600 text-blue-500">z1xus</a>
+					it exists so you can test your smoothie-rs config or render a video quickly without installing anything
 				</p>
+				<br />
+				<p class="mb-1 text-2xl font-bold">who made this?</p>
+				<hr class="my-4 mx-auto w-1/2 border-gray-600" />
 				<p>
-					credit to <a href="https://github.com/couleur-tweak-tips/smoothie-rs/graphs/contributors" class="hover:text-blue-600 text-blue-500"
-						>couleur and contributors</a
-					>
-					for
-					<a href="https://github.com/couleur-tweak-tips/smoothie-rs/" class="hover:text-blue-600 text-blue-500">smoothie-rs</a>
+					this was created by <a href="https://z1xus.netlify.app/" class="hover:text-blue-600 text-blue-500">z1xus</a>, using <a href="https://github.com/couleur-tweak-tips/smoothie-rs/" class="hover:text-blue-600 text-blue-500">smoothie-rs</a> developed by <a href="https://github.com/couleur-tweak-tips/smoothie-rs/graphs/contributors" class="hover:text-blue-600 text-blue-500">couleur and contributors</a>
 				</p>
 				<p>renders provided to you by intel uhd graphics 630</p>
 				<button
